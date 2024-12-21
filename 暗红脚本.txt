@@ -502,7 +502,7 @@ local Section = Tab:AddSection({
 })
 
 local Section = Tab:AddSection({
-	Name = "2024年12月3号暗红脚本归回"
+	Name = "2024年12月3号暗红脚本"
 })
 Tab:AddParagraph("Orion作者是谁","作者是shlexware")
 
