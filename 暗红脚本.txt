@@ -1,5 +1,5 @@
 local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
-Notification.Notify("️暗红脚本[旧]", "正在加启动", "rbxassetid://10483855823", {
+Notification.Notify("️暗红脚本[旧]", "正在启动", "rbxassetid://10483855823", {
     Duration = 5,       
     Main = {
         Rounding = true,
@@ -28,7 +28,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("暗红脚本归回来了！！","即将推出~")
+Tab:AddParagraph("暗红脚本回来了！！","即将推出~")
 Tab:AddParagraph("暗红脚本使用永久免费","禁止圈钱，禁止视频买暗红脚本")
 
 Tab:AddParagraph("暗红脚本有什么支持游戏","自然灾害,造船寻宝,监狱人生,忍者传奇,力量传奇,极速传奇,鲨口生求2,Field Trip Z ,彩虹好友,寻宝模拟器 Evade,其他游戏通用")
@@ -232,7 +232,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("即将推出...","感谢你的用云脚本")
+Tab:AddParagraph("即将推出...","感谢你的用暗红脚本")
 
 local Tab = Window:MakeTab({
 	Name = "造船寻宝",
