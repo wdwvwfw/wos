@@ -369,6 +369,13 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "隐形人",
+	Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Bebo-Mods/BeboScripts/main/UniversalInvis.lua", true))()
+  	end    
+})
+
     local Tab = Window:MakeTab({
 	Name = "伐木大享",
 	Icon = "rbxassetid://4483345998",
