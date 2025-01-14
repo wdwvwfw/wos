@@ -376,6 +376,13 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "吸块",
+	Callback = function()
+     loadstring(game:HttpGet("https://pastebin.com/raw/07GGb4Dk"))()
+  	end    
+})
+
     local Tab = Window:MakeTab({
 	Name = "伐木大享",
 	Icon = "rbxassetid://4483345998",
