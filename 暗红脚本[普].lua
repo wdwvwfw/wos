@@ -389,7 +389,14 @@ Tab:AddButton({
      loadstring(game:HttpGet("https://raw.githubusercontent.com/MrWitzbold/Elysian-2.0-GUI/refs/heads/main/main.lua"))()
   	end    
 })
- 
+
+Tab:AddButton({
+	Name = "洞吸",
+	Callback = function()
+     loadstring(game:HttpGet('https://pastebin.com/raw/wBsi24w3'))()
+  	end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "伐木大享",
 	Icon = "rbxassetid://4483345998",
