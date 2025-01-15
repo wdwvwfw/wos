@@ -418,6 +418,13 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "管理员2",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ZhenX21/Admin-Commands-Script/main/source"))()
+  	end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "伐木大享",
 	Icon = "rbxassetid://4483345998",
