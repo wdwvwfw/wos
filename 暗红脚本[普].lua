@@ -425,6 +425,13 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ZhenX21/Admin-Command
   	end    
 })
 
+Tab:AddButton({
+	Name = "炸弹💣",
+	Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts-3/main/Multi%20gear%20activator.lua"))()
+  	end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "伐木大享",
 	Icon = "rbxassetid://4483345998",
