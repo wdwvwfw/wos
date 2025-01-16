@@ -446,13 +446,20 @@ Tab:AddButton({
   	end    
 })
 
-
 Tab:AddButton({
 	Name = "吸玩家",
 	Callback = function()
      loadstring(game:HttpGet("https://raw.githubusercontent.com/wdwvwfw/wos/refs/heads/main/%E5%90%B8%E7%8E%A9%E5%AE%B6.lua"))()
   	end    
 })
+
+Tab:AddButton({
+	Name = "传送玩家",
+	Callback = function()
+     loadstring(game:HttpGet("https://gist.githubusercontent.com/DagerFild/b4776075a0d26ef04394133ee6bd2081/raw/0ed51ac94057d2d9a9f00e1b037b9011c76ca54a/tpGUI", true))()
+  	end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "伐木大享",
 	Icon = "rbxassetid://4483345998",
