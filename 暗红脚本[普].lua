@@ -432,6 +432,13 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "禁止锤子",
+	Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/BingusWR/banhammerv3/refs/heads/main/BanHammerv3", true))()
+  	end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "伐木大享",
 	Icon = "rbxassetid://4483345998",
