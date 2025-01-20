@@ -620,4 +620,76 @@ Tab:AddButton({
      loadstring(game:HttpGet("https://pastebin.com/raw/v2yEJYmu"))()
   	end    
 })
-  
+
+Tab:AddButton({
+	Name = "DOORS1无敌强",
+	Callback = function()
+     loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\54\53\84\119\84\56\106\97"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "DOORS2人机脚本",
+	Callback = function()
+     loadstring(game:HttpGet("https://github.com/DocYogurt/Main/raw/main/Scripts/DF2RW.lua"))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "监狱人生",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+
+Tab:AddButton({
+	Name = "监狱人生1",
+	Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/SpecialXyt/Prison-Life-/main/OrekiHub"))();
+  	end    
+})
+
+Tab:AddButton({
+	Name = "监狱人生2",
+	Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/PRISONWARE_v1.3.txt"))();
+  	end    
+})
+
+Tab:AddButton({
+	Name = "监狱人生3",
+	Callback = function()
+     loadstring(game:HttpGet("https://pastebin.com/raw/Gae7YC84"))();
+  	end    
+})
+
+Tab:AddButton({
+	Name = "监狱人生4多功能",
+	Callback = function()
+     loadstring(game:HttpGet('https://raw.githubusercontent.com/IlikeyocutgHAH12/MoonUI-v10-/main/MoonUI%20v10'))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Slap Battles",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+
+Tab:AddButton({
+	Name = "巴掌强大[英文]",
+	Callback = function()
+     loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\54\53\84\119\84\56\106\97"))()
+  	end    
+})
