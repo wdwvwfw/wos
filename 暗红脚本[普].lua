@@ -752,3 +752,53 @@ Tab:AddButton({
      loadstring(game:HttpGet("https://github.com/Stang001/pulawat/blob/main/BladeBall.lua?raw=true"))()
   	end    
 })
+
+local Tab = Window:MakeTab({
+	Name = "内脏与黑火药",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+
+Tab:AddButton({
+	Name = "内脏与黑火药1[清风]",
+	Callback = function()
+     loadstring(game:HttpGet(("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\65\81\84\70\69\72\54\84"),true))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "最强战场",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]Tab:AddButton({
+	Name = "最强战场",
+	Callback = function()
+     loadstring(game:HttpGet("https://pastebin.com/raw/1Gp9c57U"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "最强战场虚空秒杀",
+	Callback = function()
+     loadstring(game:HttpGet("https://pastefy.app/REPoaFWC/raw",true))();
+  	end    
+})
+
+Tab:AddButton({
+	Name = "最强战场多功能",
+	Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/SaitamaBattlegrounds.lua"))()
+  	end    
+})
