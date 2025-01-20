@@ -693,3 +693,43 @@ Tab:AddButton({
      loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\54\53\84\119\84\56\106\97"))()
   	end    
 })
+
+local Tab = Window:MakeTab({
+	Name = "动感星期五",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+
+Tab:AddButton({
+	Name = "动感星期五1",
+	Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/ltseverydayyou/uuuuuuu/main/Funky%20Friday/BotPlayer.lua"))();
+  	end    
+})
+
+Tab:AddButton({
+	Name = "动感星期五2",
+	Callback = function()
+     loadstring(game:HttpGet("https://scriptblox.com/raw/XMAS-Event-or-Funky-Friday-Auto-Player-Mobile-6721"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "动感星期五3",
+	Callback = function()
+     loadstring(game:HttpGet("https://rawscripts.net/raw/Funky-Friday-Autoplay-WORKS-ON-MOBILE-22426"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "动感星期五4",
+	Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/wally-rblx/funky-friday-autoplay/main/main.lua",true))()
+  	end    
+})
