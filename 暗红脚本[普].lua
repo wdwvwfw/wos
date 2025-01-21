@@ -739,6 +739,10 @@ Tab:AddButton({
   	end    
 })
 
+local Section = Tab:AddSection({
+	Name = "DOORS脚本"
+})
+	
 Tab:AddButton({
 	Name = "DOORS1无敌强",
 	Callback = function()
