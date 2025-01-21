@@ -1,4 +1,4 @@
-local OrionLib = loadstring(game:HttpGet("https://pastebin.com/raw/VeaMSRZK"))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source'))()
 local LBLG = Instance.new("ScreenGui", getParent)
 local LBL = Instance.new("TextLabel", getParent)
 local player = game.Players.LocalPlayer
@@ -40,7 +40,7 @@ end
 
 OrionLib:MakeNotification({
                     Name = "正在开启反挂机请稍等...",
-                    Content = "Akf 开启中...",
+                    Content = "加载开启中...",
                     Time = 2
                 })     
                 
@@ -53,7 +53,7 @@ OrionLib:MakeNotification({
 
 OrionLib:MakeNotification({
                     Name = "开启成功",
-                    Content = "AKF",
+                    Content = "暗红脚本",
                     Time = 1
                 })
 Start = tick()
@@ -72,10 +72,10 @@ Tab:AddParagraph("暗红脚本多功能")
 Tab:AddButton ({
 	Name = "复制群号",
 	Callback = function ()
-	 setclipboard("sudh")
+	 setclipboard("942272935")
 	 OrionLib:MakeNotification({
                     Name = "信息",
-                    Content = "942272935",
+                    Content = "复制群号942272935",
                     Time = 2
                 })
 	end
