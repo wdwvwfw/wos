@@ -1,18 +1,85 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local OrionLib = loadstring(game:HttpGet("https://pastebin.com/raw/VeaMSRZK"))()
+local LBLG = Instance.new("ScreenGui", getParent)
+local LBL = Instance.new("TextLabel", getParent)
+local player = game.Players.LocalPlayer
 
-local Window = OrionLib:MakeWindow({Name = "暗红脚本", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+LBLG.Name = "LBLG"
+LBLG.Parent = game.CoreGui
+LBLG.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+LBLG.Enabled = true
+LBL.Name = "LBL"
+LBL.Parent = LBLG
+LBL.BackgroundColor3 = Color3.new(1, 1, 1)
+LBL.BackgroundTransparency = 1
+LBL.BorderColor3 = Color3.new(0, 0, 0)
+LBL.Position = UDim2.new(0.75,0,0.010,0)
+LBL.Size = UDim2.new(0, 133, 0, 30)
+LBL.Font = Enum.Font.GothamSemibold
+LBL.Text = "Test"
+LBL.TextColor3 = Color3.new(155, 155, 155)
+LBL.TextScaled = true
+LBL.TextSize = 14
+LBL.TextWrapped = true
+LBL.Visible = true
 
---[[
-Name = <string> - The name of the UI.
-HidePremium = <bool> - Whether or not the user details shows Premium status or not.
-SaveConfig = <bool> - Toggles the config saving in the UI.
-ConfigFolder = <string> - The name of the folder where the configs are saved.
-IntroEnabled = <bool> - Whether or not to show the intro animation.
-IntroText = <string> - Text to show in the intro animation.
-IntroIcon = <string> - URL to the image you want to use in the intro animation.
-Icon = <string> - URL to the image you want displayed on the window.
-CloseCallback = <function> - Function to execute when the window is closed.
-]]
+local FpsLabel = LBL
+local Heartbeat = game:GetService("RunService").Heartbeat
+local LastIteration, Start
+local FrameUpdateTable = { }
+
+local function HeartbeatUpdate()
+	LastIteration = tick()
+	for Index = #FrameUpdateTable, 1, -1 do
+		FrameUpdateTable[Index + 1] = (FrameUpdateTable[Index] >= LastIteration - 1) and FrameUpdateTable[Index] or nil
+	end
+	FrameUpdateTable[1] = LastIteration
+	local CurrentFPS = (tick() - Start >= 1 and #FrameUpdateTable) or (#FrameUpdateTable / (tick() - Start))
+	CurrentFPS = CurrentFPS - CurrentFPS % 1
+	FpsLabel.Text = ("标准时间:"..os.date("%H").."时"..os.date("%M").."分"..os.date("%S"))
+end
+
+OrionLib:MakeNotification({
+                    Name = "正在开启反挂机请稍等...",
+                    Content = "Akf 开启中...",
+                    Time = 2
+                })     
+                
+		local vu = game:GetService("VirtualUser")
+		game:GetService("Players").LocalPlayer.Idled:connect(function()
+		   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		   wait(1)
+		   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		end)      
+
+OrionLib:MakeNotification({
+                    Name = "开启成功",
+                    Content = "AKF",
+                    Time = 1
+                })
+Start = tick()
+Heartbeat:Connect(HeartbeatUpdate)
+local Window = OrionLib:MakeWindow({Name = "暗红脚本", HidePremium = false, SaveConfig =true,IntroText="加载暗红脚本", ConfigFolder = "文件存放名"})
+local Tab = Window:MakeTab({
+	Name = "主页",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddParagraph("作者:暗红血")
+Tab:AddParagraph("暗红脚本多功能")
+
+
+Tab:AddButton ({
+	Name = "复制群号",
+	Callback = function ()
+	 setclipboard("sudh")
+	 OrionLib:MakeNotification({
+                    Name = "信息",
+                    Content = "942272935",
+                    Time = 2
+                })
+	end
+})
 
 local Tab = Window:MakeTab({
 	Name = "人物脚本",
@@ -26,53 +93,118 @@ Icon = <string> - The icon of the tab.
 PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
 ]]
 
-local Section = Tab:AddSection({
-	Name = "Section"
-})
+Tab:AddSlider({
 
---[[
-Name = <string> - The name of the section.
-]]
+	Name = "跳跃高度",
 
-OrionLib:MakeNotification({
-	Name = "暗红脚本",
-	Content = "Notification content... what will it say??",
-	Image = "rbxassetid://4483345998",
-	Time = 5
-})
+	Min = 50,
 
---[[
-Title = <string> - The title of the notification.
-Content = <string> - The content of the notification.
-Image = <string> - The icon of the notification.
-Time = <number> - The duration of the notfication.
-]]
+	Max = 200,
 
-Tab:AddTextbox({
-	Name = "跳跃",
-	Default = "",
-	TextDisappear = true,
+	Default = 50,
+
+	Color = Color3.fromRGB(255,255,255),
+
+	Increment = 1,
+
+	ValueName = "数值",
+
 	Callback = function(Value)
+
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
-	end
+
+	end    
+
 })
 
-Tab:AddTextbox({
+Tab:AddSlider({
+
 	Name = "速度",
-	Default = "",
-	TextDisappear = true,
+
+	Min = 16,
+
+	Max = 200,
+
+	Default = 16,
+
+	Color = Color3.fromRGB(255,255,255),
+
+	Increment = 1,
+
+	ValueName = "数值",
+
 	Callback = function(Value)
+
 		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+
+	end    
+
+})
+
+Tab:AddTextbox({
+
+	Name = "移动速度设置",
+
+	Default = "",
+
+	TextDisappear = true,
+
+	Callback = function(Value)
+
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+		
+		OrionLib:MakeNotification({
+                    Name = "成功设置速度:  "..game.Players.LocalPlayer.Character.Humanoid.WalkSpeed.."   |速度",
+                    Content = "成功",
+                    Time = 3
+                })
 	end
 })
 
 Tab:AddTextbox({
-	Name = "重力",
+	Name = "重力设置",
 	Default = "",
 	TextDisappear = true,
 	Callback = function(Value)
 		game.Workspace.Gravity = Value
+		
+		OrionLib:MakeNotification({
+                    Name = "成功设置重力:  "..game.Workspace.Gravity.."   |重力",
+                    Content = "成功",
+                    Time = 3
+                })
 	end
+})
+
+Tab:AddToggle({
+	Name = "穿墙",
+	Default = false,
+	Callback = function(Value)
+		if Value then
+		    Noclip = true
+		    Stepped = game.RunService.Stepped:Connect(function()
+			    if Noclip == true then
+				    for a, b in pairs(game.Workspace:GetChildren()) do
+                        if b.Name == game.Players.LocalPlayer.Name then
+                            for i, v in pairs(game.Workspace[game.Players.LocalPlayer.Name]:GetChildren()) do
+                                if v:IsA("BasePart") then
+                                    v.CanCollide = false
+                                end
+                            end
+                        end
+                    end
+			    else
+				    Stepped:Disconnect()
+			    end
+		    end)
+	    else
+		    Noclip = false
+	    end
+	end
+})
+
+local Section = Tab:AddSection({
+	Name = "以下为通用功能"
 })
 
 Tab:AddTextbox({
@@ -113,20 +245,6 @@ Tab:AddButton({
 	Name = "飞行V3",
 	Callback = function()
      loadstring(game:HttpGet('https://pastebin.com/raw/AjDmq385'))()
-  	end    
-})
-
-Tab:AddButton({
-	Name = "甩飞别人",
-	Callback = function()
-     local CoreGui = game:GetService("StarterGui")
-
-CoreGui:SetCore("SendNotification", {
-    Title = "暗红脚本",
-    Text = "执行成功",
-    Duration = 3, 
-})
-     loadstring(game:HttpGet("https://pastebin.com/raw/GnvPVBEi"))()
   	end    
 })
 
