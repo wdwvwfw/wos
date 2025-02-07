@@ -65,7 +65,7 @@ OrionLib:MakeNotification({
                 })
 Start = tick()
 Heartbeat:Connect(HeartbeatUpdate)
-local Window = OrionLib:MakeWindow({Name = "脚本名", HidePremium = false, SaveConfig =true,IntroText="加载脚本", ConfigFolder = "文件存放名"})
+local Window = OrionLib:MakeWindow({Name = "喑红脚本", HidePremium = false, SaveConfig =true,IntroText="加载暗红脚本", ConfigFolder = "文件存放名"})
 local Tab = Window:MakeTab({
 	Name = "主页",
 	Icon = "rbxassetid://4483345998",
