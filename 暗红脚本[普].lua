@@ -68,7 +68,6 @@ local Tab = Window:MakeTab({
 Tab:AddParagraph("作者:暗红血")
 Tab:AddParagraph("暗红脚本多功能")
 
-
 Tab:AddButton ({
 	Name = "复制群号",
 	Callback = function ()
