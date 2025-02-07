@@ -1,4 +1,4 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source'))()
+local OrionLib = loadstring(game:HttpGet("https://pastebin.com/raw/VeaMSRZK"))()
 local LBLG = Instance.new("ScreenGui", getParent)
 local LBL = Instance.new("TextLabel", getParent)
 local player = game.Players.LocalPlayer
@@ -40,11 +40,18 @@ end
 
 OrionLib:MakeNotification({
                     Name = "正在开启反挂机请稍等...",
-                    Content = "加载开启中...",
+                    Content = "正在开启中...",
                     Time = 2
-                })     
+                })
                 
 		local vu = game:GetService("VirtualUser")
+		game:GetService("Players").LocalPlayer.Idled:connect(function()
+		   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		   wait(1)
+		   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		end)
+
+local vu = game:GetService("VirtualUser")
 		game:GetService("Players").LocalPlayer.Idled:connect(function()
 		   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 		   wait(1)
@@ -58,7 +65,7 @@ OrionLib:MakeNotification({
                 })
 Start = tick()
 Heartbeat:Connect(HeartbeatUpdate)
-local Window = OrionLib:MakeWindow({Name = "暗红脚本", HidePremium = false, SaveConfig =true,IntroText="加载暗红脚本", ConfigFolder = "文件存放名"})
+local Window = OrionLib:MakeWindow({Name = "脚本名", HidePremium = false, SaveConfig =true,IntroText="加载脚本", ConfigFolder = "文件存放名"})
 local Tab = Window:MakeTab({
 	Name = "主页",
 	Icon = "rbxassetid://4483345998",
@@ -81,17 +88,10 @@ Tab:AddButton ({
 })
 
 local Tab = Window:MakeTab({
-	Name = "人物脚本",
+	Name = "通用",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-
---[[
-Name = <string> - The name of the tab.
-Icon = <string> - The icon of the tab.
-PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
-]]
-
 Tab:AddSlider({
 
 	Name = "跳跃高度",
