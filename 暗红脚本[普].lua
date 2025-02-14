@@ -73,7 +73,7 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddParagraph("作者:暗红血")
-Tab:AddParagraph("暗红脚本多功能")
+Tab:AddParagraph("暗红脚本更新忍者传奇")
 
 Tab:AddButton ({
 	Name = "复制群号",
