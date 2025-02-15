@@ -72,16 +72,16 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("作者:暗红血")
+Tab:AddParagraph("作者","暗红血")
 Tab:AddParagraph("暗红脚本更新忍者传奇")
 
 Tab:AddButton ({
-	Name = "复制群号",
+	Name = "复制群",
 	Callback = function ()
 	 setclipboard("942272935")
 	 OrionLib:MakeNotification({
-                    Name = "信息",
-                    Content = "复制群号942272935",
+                    Name = "群号942272935",
+                    Content = "复制请在粘贴,
                     Time = 2
                 })
 	end
