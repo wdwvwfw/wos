@@ -16,6 +16,7 @@ local XA = Players.LocalPlayer
  Icon = "rbxassetid://6026568198", 
  PremiumOnly = false 
  })
+
 LOL:AddLabel("当前服务器ID:" .. game.GameId .. ".")
 about:AddParagraph("您的用户名:"," "..game.Players.LocalPlayer.Name.."")
 about:AddParagraph("您的注入器:"," "..identifyexecutor().."")
