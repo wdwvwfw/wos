@@ -1,9 +1,9 @@
 local OrionLib = loadstring(game:HttpGet("https://pastebin.com/raw/VeaMSRZK", true))()
- local Window =   OrionLib:MakeWindow({Name = "暗红血脚本", HidePremium = false, SaveConfig = false, ConfigFolder = "rbxassetid://6026568198"}) 
+ local Window =   OrionLib:MakeWindow({Name = "暗红血缝合王", HidePremium = false, SaveConfig = false, ConfigFolder = "rbxassetid://6026568198"}) 
 
  OrionLib:MakeNotification({ 
- Name = "暗红血脚本", 
- Content = "欢迎使用暗红血脚本！", 
+ Name = "暗红血缝合王", 
+ Content = "欢迎使用暗红血缝合王！", 
  Image = "rbxassetid://4483345998", 
  Time = 5 
  })
@@ -22,7 +22,6 @@ about:AddParagraph("您的注入器:"," "..identifyexecutor().."")
 LOL:AddLabel("作者：暗红血缝合王")
 LOL:AddLabel("QQ：3920675298")
 LOL:AddLabel("暗红血群号：942272935")
-LOL:AddLabe1（"暗红血让QQ3126295205更新太无耻了"）
 
 local Tab = Window:MakeTab({ 
  Name = "通用脚本", 
@@ -870,7 +869,7 @@ Tab:AddButton({
      local CoreGui = game:GetService("StarterGui")
 
 CoreGui:SetCore("SendNotification", {
-    Title = "暗红血",
+    Title = "暗红血缝合王",
     Text = "（自动已开启）",
     Duration = 3, 
 })
