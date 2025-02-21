@@ -19,9 +19,10 @@ local XA = Players.LocalPlayer
 LOL:AddLabel("当前服务器ID:" .. game.GameId .. ".")
 about:AddParagraph("您的用户名:"," "..game.Players.LocalPlayer.Name.."")
 about:AddParagraph("您的注入器:"," "..identifyexecutor().."")
-LOL:AddLabel("作者：暗红血")
+LOL:AddLabel("作者：暗红血缝合王")
 LOL:AddLabel("QQ：3920675298")
 LOL:AddLabel("暗红血群号：942272935")
+LOL:AddLabe1（"暗红血让QQ3126295205更新太无耻了"）
 
 local Tab = Window:MakeTab({ 
  Name = "通用脚本", 
