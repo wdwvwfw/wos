@@ -1,4 +1,4 @@
-function Notify(Title1, Text1, Icon1, Time1)
+ function Notify(Title1, Text1, Icon1, Time1)
   game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = Title1,
     Text = Text1,
@@ -119,7 +119,7 @@ bin:Label("服务器id:"..game.GameId)
 
 about:Label("作者暗红血")
 about:Label("作者qq3920675298")
-about:Label("正在努力优化")
+about:Label("正在努力优化，感谢合伙人TK作者")
 about:Label("请勿倒卖")
 about:Button("复制作者QQ", function()
     setclipboard("3920675298")
