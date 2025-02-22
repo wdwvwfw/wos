@@ -113,8 +113,11 @@ local QOS = OSQ:section("主要",true)
 local SQO = OSQ:section("其他",true)
 local Tab2 = OSQ:section("传送位置",true)
 
-local SQS = Window:Tab("恐鬼症,'16060333448")
+local SQS = Window:Tab("恐鬼症",'16060333448")
 local QZO = SQS:section("主要",true)
+
+local SZB = Window:Tab("危险运输",'16060333448)
+local SBZ = SZB:section("主要",true)
 
 bin:Label("你的用户名:"..game.Players.LocalPlayer.Name)
 bin:Label("你的注入器:"..identifyexecutor())
@@ -985,3 +988,8 @@ end)
 QZO:Button("脚本", function()
   loadstring(game:HttpGet("https://github.com/wdwvwfw/wos/raw/main/%E6%81%90%E9%AC%BC%E7%97%87.lua"))()
 end)
+SBZ:Button("脚本", function()
+  loadstring(game:HttpGet("https://raw
+.githubusercontent.com/railme37509124/weqwdsadasdsa/refs/heads/main/justgetituploadedalreadyihateriskyhaul.lua"))()
+end)
+
