@@ -58,14 +58,14 @@ function DisableGhostESP()
     -- 恢复玩家的透明度为不透明
     for _, part in pairs(character:GetChildren()) do
         if part:IsA("BasePart") then
-            part.LocalTransparencyModifier = 0  -- 恢复不透明
+            part.LocalTransparencyModifier = 1  -- 恢复不透明
         end
     end
 
     -- 恢复游戏世界中所有物体的透明度为不透明
     for _, obj in pairs(workspace:GetChildren()) do
         if obj:IsA("BasePart") then
-            obj.LocalTransparencyModifier = 0  -- 恢复物体为不透明
+            obj.LocalTransparencyModifier = 1  -- 恢复物体为不透明
         end
     end
 end
