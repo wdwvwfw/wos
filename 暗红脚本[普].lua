@@ -607,6 +607,126 @@ Tab:AddButton({
 })
 
 
+local player = Window:MakeTab({
+        Name = "超级大力士",
+        Icon = "rbxassetid://7733779610",
+        PremiumOnly = false
+})
+
+player:AddButton({ 
+        Name = "1",
+        Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/ToraScript/Script/main/Strongman'))()
+          end
+})
+
+local player = Window:MakeTab({
+        Name = "幸运方块",
+        Icon = "rbxassetid://7733779610",
+        PremiumOnly = false
+})
+
+player:AddButton({ 
+        Name = "1",
+        Callback = function()
+              loadstring(game:HttpGet("https://raw.githubusercontent.com/PlanetHubX/Lucky-Blocks/main/source", true))()
+          end
+})
+
+local player = Window:MakeTab({
+        Name = "EVADE",
+        Icon = "rbxassetid://7733779610",
+        PremiumOnly = false
+})
+
+player:AddButton({ 
+        Name = "1",
+        Callback = function()
+              loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/Evade"))()
+          end
+})
+
+local player = Window:MakeTab({
+        Name = "Break in 2",
+        Icon = "rbxassetid://7733779610",
+        PremiumOnly = false
+})
+
+player:AddButton({ 
+        Name = "1",
+        Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/Break/main/In"))()
+          end
+})
+
+local Tab = Window:MakeTab({
+        Name = "兵工厂",
+        Icon = "rbxassetid://7733779610",
+        PremiumOnly = false
+})
+
+Tab:AddButton({
+    Name = "1",
+    Callback = function()
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+    end
+})
+
+Tab:AddButton({
+    Name = "2",
+    Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/RandomAdamYT/DarkHub/master/Init'), true))()
+    end
+})
+
+local Tab = Window:MakeTab({
+        Name = "索尔的RNG",
+        Icon = "rbxassetid://7733779610",
+        PremiumOnly = false
+})
+
+Tab:AddButton({
+        Name = "1",
+        Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Looser3itx/Hmmmmmmmmmmmmmmmmmmmmmmmmmmmm/main/loader.lua"))()
+          end
+})
+
+Tab:AddButton({
+        Name = "hoho(需卡密)",
+        Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+          end
+})
+
+Tab:AddButton({
+        Name = "3(需卡密)",
+        Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/upd/main/rng"))()
+          end
+})
+
+local Tab = Window:MakeTab({
+        Name = "巴掌大战",
+        Icon = "rbxassetid://7733779610",
+        PremiumOnly = false
+})
+
+Tab:AddButton({
+        Name = "1",
+        Callback = function()
+loadstring(game:HttpGet"https://raw.githubusercontent.com/darkxwin/darkxsourcethinkyoutousedarkx/main/darkx")()
+          end
+})
+
+Tab:AddButton({
+        Name = "2",
+        Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/haxhell/roblox-scripts/main/slap-battles.lua", true))()
+          end
+})
+
+
 local Tab = Window:MakeTab({
         Name = "炸弹模拟器",
         Icon = "rbxassetid://6087485864",
