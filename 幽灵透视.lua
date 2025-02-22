@@ -35,8 +35,8 @@ local Tab = Window:MakeTab({
 
 Tab:AddButton({
 	Name = "幽灵透视",
-	Callback = function()   
-    for _, part in pairs(character:GetChildren()) do
+	Callback = function()
+     for _, part in pairs(character:GetChildren()) do
         if part:IsA("BasePart") then
             part.LocalTransparencyModifier = 0.5  -- 设置角色部件为半透明
         end
@@ -71,3 +71,5 @@ function DisableGhostESP()
 end
   	end    
 })
+
+  	
