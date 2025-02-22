@@ -105,11 +105,6 @@ Tab:AddButton({
     end
 })
 
-Tab:AddButton({	
-        Name = "开启玩家进出服务器提示",	
- Callback = function()      	loadstring(game:HttpGet("https://raw.githubusercontent.com/boyscp/scriscriptsc/main/bbn.lua", true))()    	 end
-})
-
 Tab:AddToggle({
         Name = "跳跃",
         Default = false,
