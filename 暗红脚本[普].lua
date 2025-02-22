@@ -1,3 +1,7 @@
+--[[
+未经同意禁止出源，否则后果自负
+]]
+
 local OrionLib = loadstring(game:HttpGet("https://pastebin.com/raw/VeaMSRZK", true))()
  local Window =   OrionLib:MakeWindow({Name = "暗红血缝合王V2", HidePremium = false, SaveConfig = false, ConfigFolder = "rbxassetid://6026568198"}) 
 
