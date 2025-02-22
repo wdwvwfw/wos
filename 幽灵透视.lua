@@ -35,23 +35,8 @@ local Tab = Window:MakeTab({
 
 Tab:AddButton({
 	Name = "幽灵透视",
-	Callback = function()    
-        if Value then
-            GhostESPEnabled = true
-            EnableGhostESP()  -- 启用幽灵透视
-        else
-            GhostESPEnabled = false
-            DisableGhostESP()  -- 禁用幽灵透视
-        end
-    end,
-})
-
--- 启用幽灵透视：改变玩家和物体的透明度
-function EnableGhostESP()
-    local player = game.Players.LocalPlayer
-    local character = player.Character or player.CharacterAdded:Wait()
+	Callback = function()
     
-    -- 修改玩家自身的透明度，使其变得透明
     for _, part in pairs(character:GetChildren()) do
         if part:IsA("BasePart") then
             part.LocalTransparencyModifier = 0.5  -- 设置角色部件为半透明
