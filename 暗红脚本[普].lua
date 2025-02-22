@@ -91,10 +91,6 @@ Tab:AddTextbox({
         end
 })
 
-about:Button("玩家加入游戏提示",function()loadstring(game:HttpGet("https://raw.githubusercontent.com/boyscp/scriscriptsc/main/bbn.lua"))()
-  end
-})
-
 Tab:AddButton({
         Name = "FE刷99消音器手枪",
  Callback = function()
