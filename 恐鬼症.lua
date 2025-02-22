@@ -1,10 +1,10 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "恐鬼症 1.2.1  [停更]",
+   Name = "恐鬼症 1.2.1 ",
    Icon = 0,
-   LoadingTitle = "恐鬼症 1.2.1  [停更]",
-   LoadingSubtitle = "by 龙城",
+   LoadingTitle = "恐鬼症 1.2.1 ",
+   LoadingSubtitle = "by 暗红血",
    Theme = "DarkBlue",
 
    DisableRayfieldPrompts = false,
@@ -12,13 +12,13 @@ local Window = Rayfield:CreateWindow({
 
    KeySystem = true,
    KeySettings = {
-      Title = "恐鬼症 1.2.1  [停更]",
+      Title = "恐鬼症 1.2.1  ",
       Subtitle = "验证系统",
-      Note = "加入群聊看公告获取卡密 企鹅交流群:751910733",
+      Note = "卡密1",
       FileName = "horror",
       SaveKey = true,
       GrabKeyFromSite = false,
-      Key = {"LongCheng"}
+      Key = {"1"}
    }
 })
 
