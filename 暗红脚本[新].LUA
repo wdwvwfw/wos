@@ -1,4 +1,4 @@
- function Notify(Title1, Text1, Icon1, Time1)
+function Notify(Title1, Text1, Icon1, Time1)
   game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = Title1,
     Text = Text1,
@@ -113,13 +113,16 @@ local QOS = OSQ:section("主要",true)
 local SQO = OSQ:section("其他",true)
 local Tab2 = OSQ:section("传送位置",true)
 
+local SQS = Window:Tab("恐鬼症,'16060333448")
+local QZO = SQS:section("主要",true)
+
 bin:Label("你的用户名:"..game.Players.LocalPlayer.Name)
 bin:Label("你的注入器:"..identifyexecutor())
 bin:Label("服务器id:"..game.GameId)
 
 about:Label("作者暗红血")
 about:Label("作者qq3920675298")
-about:Label("正在努力优化，感谢合伙人TK作者")
+about:Label("正在努力优化")
 about:Label("请勿倒卖")
 about:Button("复制作者QQ", function()
     setclipboard("3920675298")
@@ -978,4 +981,7 @@ Tab2:Button("传送油桶3", function()
 end)
 Tab2:Button("传送油桶4", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(69.48390197753906, 105.25657653808594, 3434.9033203125)
+end)
+QZO:Button("脚本", function()
+  loadstring(game:HttpGet("https://github.com/wdwvwfw/wos/raw/main/%E6%81%90%E9%AC%BC%E7%97%87.lua"))()
 end)
