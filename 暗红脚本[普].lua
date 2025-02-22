@@ -473,6 +473,56 @@ Tab:AddButton({
           end
 })
 
+Tab:AddButton({
+  Name = "2",
+  Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dalloc2/Roblox/main/TigerAdmin.lua"))()
+  end
+})
+
+Tab:AddButton({
+        Name = "手里剑秒杀",
+        Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/PSXhuge/1/114514/jian"))()
+          end
+})
+
+local Section = Tab:AddSection({
+        Name = "传送"
+})
+local Section = Tab:AddSection({
+        Name = "传送位置"
+})
+
+Tab:AddButton({
+        Name = "警卫室",
+        Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(847.7261352539062, 98.95999908447266, 2267.387451171875)
+          end
+})
+
+Tab:AddButton({
+        Name = "监狱室内",
+        Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(919.2575073242188, 98.95999908447266, 2379.74169921875)
+          end
+})
+
+Tab:AddButton({
+        Name = "罪犯复活点",
+        Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-937.5891723632812, 93.09876251220703, 2063.031982421875)
+          end
+})
+
+Tab:AddButton({
+        Name = "监狱室外",
+        Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(760.6033325195312, 96.96992492675781, 2475.405029296875)
+          end
+})
+
+
 
 local Tab = Window:MakeTab({
         Name = "越狱",
