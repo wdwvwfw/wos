@@ -100,6 +100,13 @@ loadstring(game:HttpGet("https://github.com/xiaoSB33/M416/raw/main/FE.lua", true
   end
 })
 
+Tab:AddButton({
+    Name = "动作",
+    Callback = function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/Zj4NnKs6"))()
+    end
+})
+
 Tab:AddButton({	
         Name = "开启玩家进出服务器提示",	
  Callback = function()      	loadstring(game:HttpGet("https://raw.githubusercontent.com/boyscp/scriscriptsc/main/bbn.lua", true))()    	 end
