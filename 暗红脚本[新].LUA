@@ -489,8 +489,8 @@ RZQC:Button("传送到死亡宠物", function()
   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4593.21337890625, 130.87181091308594, 1430.2239990234375)
 end)
 
-TLT:Button("落叶监狱人生", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/uDs9bhc8"))()
+TLT:Button("最强监狱人生", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/devguy100/PrizzLife/main/Source/release_v0.8.1.lua"))()
 end)
 
 JYRS:Button("无敌模式", function()
