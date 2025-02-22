@@ -984,77 +984,13 @@ Tab:AddButton({
                    vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
                 end)
           end
-
-local Section = Tab:AddSection({
-        Name = "自动&模式"
 })
-
-Tab:AddButton({
-        Name = "自动挥舞",
-        Callback = function()
-     if v or not ATHW then getgenv().autoswing = ATHW while true do if not getgenv().autoswing then return end for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do if v:FindFirstChild("ninjitsuGain") then game.Players.LocalPlayer.Character.Humanoid:EquipTool(v) break end end local A_1 = "swingKatana" local Event = game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(A_1) wait() 
-    end 
-  end)
-})
-
-Tab:AddButton({
-        Name = "自动售卖",
-        Callback = function()
-     getgenv().autosell = ATSELL while true do if not getgenv().autosell then return end game:GetService("Workspace").sellAreaCircles["sellAreaCircle16"].circleInner.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame wait(0.1) game:GetService("Workspace").sellAreaCircles["sellAreaCircle16"].circleInner.CFrame = CFrame.new(0,0,0) wait(0.1)
-    end  
-  end)  
-})
-
-Tab:AddButton({
-        Name = "自动购买排名",
-        Callback = function()
-     getgenv().autobuyranks = ATBP while true do if not getgenv().autobuyranks then return end local deku1 = "buyRank" for i = 1, #ranks do game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(deku1, ranks[i]) end wait(0.1) end
-          end    
-})
-
-Tab:AddButton({
-        Name = "自动购买腰带",
-        Callback = function()
-     getgenv().autobuybelts = ATBYD while true do if not getgenv().autobuybelts then return end local A_1 = "buyAllBelts" local A_2 = "Inner Peace Island" local Event = game:GetService("Players").LocalPlayer.ninjaEvent Event:FireServer(A_1, A_2) wait(0.5) 
-    end  
-  end)  
-})
-
-Tab:AddButton({
-        Name = "自动购买技能",
-        Callback = function()
-     getgenv().autobuyskills = ATB while true do if not getgenv().autobuyskills then return end local A_1 = "buyAllSkills" local A_2 = "Inner Peace Island" local Event = game:GetService("Players").LocalPlayer.ninjaEvent Event:FireServer(A_1, A_2) wait(0.5) 
-    end   
-  end)
-})
-
-Tab:AddButton({
-        Name = "自动购买剑",
-        Callback = function()
-     getgenv().autobuy = ATBS while true do if not getgenv().autobuy then return end local A_1 = "buyAllSwords" local A_2 = "Inner Peace Island" local Event = game:GetService("Players").LocalPlayer.ninjaEvent Event:FireServer(A_1, A_2) wait(0.5) 
-     end 
-  end)
-})
-
-Tab:AddButton({
-        Name = "解锁所有岛",
-        Callback = function()
-     for _, v in next, game.workspace.islandUnlockParts:GetChildren() do if v then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.islandSignPart.CFrame wait(.5)
-    end
-  end)    
-})
-
-local Section = Tab:AddSection({
-        Name = "传送位置"
-})
-
-Tab:AddButton({
+Tab:AddButton
         Name = "传送到出生点",
         Callback = function()
      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(25.665502548217773, 3.4228405952453613, 29.919952392578125)
           end    
 })
-
 Tab:AddButton({
         Name = "传送到附魔岛",
         Callback = function()
