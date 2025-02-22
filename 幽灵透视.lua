@@ -1,9 +1,9 @@
 local OrionLib = loadstring(game:HttpGet("https://pastebin.com/raw/VeaMSRZK", true))()
- local Window =   OrionLib:MakeWindow({Name = "暗红血脚本", HidePremium = false, SaveConfig = false, ConfigFolder = "rbxassetid://6026568198"}) 
+ local Window =   OrionLib:MakeWindow({Name = "暗红血缝合王V2", HidePremium = false, SaveConfig = false, ConfigFolder = "rbxassetid://6026568198"}) 
 
  OrionLib:MakeNotification({ 
- Name = "暗红血脚本", 
- Content = "欢迎使用暗红血脚本！", 
+ Name = "暗红血缝合王V2", 
+ Content = "欢迎使用暗红血缝合王！", 
  Image = "rbxassetid://4483345998", 
  Time = 5 
  })
@@ -16,10 +16,14 @@ local XA = Players.LocalPlayer
  Icon = "rbxassetid://6026568198", 
  PremiumOnly = false 
  })
+
+LOL:AddLabel("感谢清风、꒱等人")
+LOL:AddLabel("感谢清风、꒱等人")
+LOL:AddLabel("感谢清风、꒱等人")
 LOL:AddLabel("当前服务器ID:" .. game.GameId .. ".")
-about:AddParagraph("您的用户名:"," "..game.Players.LocalPlayer.Name.."")
-about:AddParagraph("您的注入器:"," "..identifyexecutor().."")
-LOL:AddLabel("作者：暗红血")
+LOL:AddParagraph("您的用户名:"," "..game.Players.LocalPlayer.Name.."")
+LOL:AddParagraph("您的注入器:"," "..identifyexecutor().."")
+LOL:AddLabel("作者：暗红血缝合王")
 LOL:AddLabel("QQ：3920675298")
 LOL:AddLabel("暗红血群号：942272935")
 
@@ -29,11 +33,9 @@ local Tab = Window:MakeTab({
  PremiumOnly = false 
  })
 
-Tab:AddTextbox({
-    Name = "幽灵透视",
-    CurrentValue = false,
-    Flag = "ToggleGhostESP",
-    Callback = function(Value)
+Tab:AddButton({
+	Name = "幽灵透视",
+	Callback = function()    
         if Value then
             GhostESPEnabled = true
             EnableGhostESP()  -- 启用幽灵透视
@@ -83,5 +85,5 @@ function DisableGhostESP()
         end
     end
 end
-end
+  	end    
 })
