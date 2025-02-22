@@ -1,8 +1,8 @@
 local OrionLib = loadstring(game:HttpGet("https://pastebin.com/raw/VeaMSRZK", true))()
- local Window =   OrionLib:MakeWindow({Name = "暗红血缝合王", HidePremium = false, SaveConfig = false, ConfigFolder = "rbxassetid://6026568198"}) 
+ local Window =   OrionLib:MakeWindow({Name = "暗红血缝合王V2", HidePremium = false, SaveConfig = false, ConfigFolder = "rbxassetid://6026568198"}) 
 
  OrionLib:MakeNotification({ 
- Name = "暗红血缝合王", 
+ Name = "暗红血缝合王V2", 
  Content = "欢迎使用暗红血缝合王！", 
  Image = "rbxassetid://4483345998", 
  Time = 5 
