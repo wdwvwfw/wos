@@ -91,6 +91,8 @@ Tab:AddTextbox({
         end
 })
 
+Tab:AddTextbox({	Name = "超广角设置",	Default = "",	TextDisappear = true,	Callback = function(Value)		Workspace.CurrentCamera.FieldOfView = Value	end})Tab:AddTextbox({	Name = "最大视野设置",	Default = "",	TextDisappear = true,	Callback = function(Value)		Workspace.CurrentCamera.FieldOfView = Value	end})Tab:AddTextbox({	Name = "最小视野设置",	Default = "",	TextDisappear = true,	Callback = function(Value)		game.Workspace.CurrentCamera.FieldOfView = v	end})
+
 Tab:AddButton({
         Name = "FE刷99消音器手枪",
  Callback = function()
