@@ -552,6 +552,20 @@ Tab:AddButton({
 
 
 local Tab = Window:MakeTab({
+        Name = "战争大亨",
+        Icon = "rbxassetid://7733779610",
+        PremiumOnly = false
+})
+
+Tab:AddButton({
+        Name = "1",
+        Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ToraIsMe/ToraIsMe/main/0wartycoon", true))()
+    end
+})
+
+
+local Tab = Window:MakeTab({
         Name = "危险运输",
         Icon = "rbxassetid://6087485864",
         PremiumOnly = false
