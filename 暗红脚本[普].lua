@@ -30,6 +30,7 @@ LOL:AddParagraph("您的注入器:"," "..identifyexecutor().."")
 LOL:AddLabel("作者：暗红血缝合王")
 LOL:AddLabel("QQ：3920675298")
 LOL:AddLabel("暗红血群号：942272935")
+LOL:AddLabel("更新忍者传奇功能")
 
 local Tab = Window:MakeTab({ 
  Name = "通用脚本", 
