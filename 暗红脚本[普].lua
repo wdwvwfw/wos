@@ -469,6 +469,70 @@ Tab:AddColorpicker({
 
 
 local Tab = Window:MakeTab({
+        Name = "极速传奇（清风制作）",
+        Icon = "rbxassetid://7733779610",
+        PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+        Name = "脚本"
+})
+
+Tab:AddButton({
+  Name = "超强(使用教程可以看我b站[公告])",
+  Callback = function()
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Script--Game/main/Script%20Game"))()
+  end
+})
+
+Tab:AddButton({
+        Name = "开启卡宠",
+        Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/uR6azdQQ"))()
+        end
+})
+
+Tab:AddButton({
+        Name = "自动重生和自动刷等级",
+        Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/T9wTL150"))()        
+          end    
+})
+
+local Section = Tab:AddSection({
+        Name = "传送岛屿"
+})
+
+Tab:AddButton({
+        Name = "返还出生岛",
+        Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9682.98828125, 58.87917709350586, 3099.033935546875)      
+          end    
+})
+
+Tab:AddButton({
+        Name = "白雪城",
+        Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9676.138671875, 58.87917709350586, 3782.69384765625)   
+          end    
+})
+
+Tab:AddButton({
+        Name = "熔岩城",
+        Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-11054.96875, 216.83917236328125, 4898.62841796875)       
+          end    
+})
+
+Tab:AddButton({
+        Name = "传奇公路",
+        Callback = function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13098.87109375, 216.83917236328125, 5907.6279296875)    
+          end    
+})
+
+
+local Tab = Window:MakeTab({
         Name = "监狱人生",
         Icon = "rbxassetid://6087485864",
         PremiumOnly = false
