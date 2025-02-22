@@ -30,10 +30,6 @@ local Tab = Window:MakeTab({
  })
 
 Tab:AddTextbox({
-local GhostESPEnabled = false  -- 用来追踪幽灵透视的状态
-
--- 创建一个开关按钮，允许玩家启用或禁用幽灵透视
-local GhostESP = Function:CreateToggle({
     Name = "幽灵透视",
     CurrentValue = false,
     Flag = "ToggleGhostESP",
