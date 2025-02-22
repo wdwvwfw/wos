@@ -23,7 +23,7 @@ local XA = Players.LocalPlayer
  
 LOL:AddLabel("感谢清风、꒱等人")
 LOL:AddLabel("感谢清风、꒱等人")
-LOL:AddLabel("感谢清风、꒱等人")
+LOL:AddLabel("清风合伙人")
 LOL:AddLabel("当前服务器ID:" .. game.GameId .. ".")
 LOL:AddParagraph("您的用户名:"," "..game.Players.LocalPlayer.Name.."")
 LOL:AddParagraph("您的注入器:"," "..identifyexecutor().."")
