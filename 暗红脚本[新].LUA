@@ -1,3 +1,7 @@
+--[[
+未经同意禁止出源，否则开户处理
+]]
+
 function Notify(Title1, Text1, Icon1, Time1)
   game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = Title1,
