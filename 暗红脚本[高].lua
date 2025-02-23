@@ -122,7 +122,7 @@ bin:Label("你的注入器:"..identifyexecutor())
 bin:Label("服务器id:"..game.GameId)
 
 about:Label("作者暗红血")
-about:Label("作者qq3920675298")
+about:Label("开放中")
 about:Label("正在努力优化")
 about:Label("请勿倒卖")
 about:Button("复制QQ群", function()
