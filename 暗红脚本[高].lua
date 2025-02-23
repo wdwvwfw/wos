@@ -17,7 +17,7 @@ Notify("暗红脚本", "永久免费","rbxassetid://17360377302",3)
 Notify("拒绝跑路", "拒绝倒卖","rbxassetid://17360377302",3)
 Notify("启动完成", "祝你玩的开心","rbxassetid://17360377302",5)
 
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xcmsnd/DrRay-UI-Library/refs/heads/main/61%E7%A0%81.txt"))();		
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/dingding123hhh/djnd/refs/heads/main/%E5%86%B7444.txt"))();
 local Window = Library:new("暗红脚本 ");
 
 local creds = Window:Tab("公告",'16060333448')
