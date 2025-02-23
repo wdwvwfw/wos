@@ -20,7 +20,7 @@ Notify("启动完成", "祝你玩的开心","rbxassetid://17360377302",5)
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/dingding123hhh/djnd/refs/heads/main/%E5%86%B7444.txt"))();
 local Window = Library:new("暗红脚本 ");
 
-local creds = Window:Tab("公告",'95292100242846')
+local creds = Window:Tab("公告",'7734068321')
 local bin = creds:section("信息",true)
 local about = creds:section("作者",true)
 
