@@ -20,99 +20,99 @@ Notify("启动完成", "祝你玩的开心","rbxassetid://17360377302",5)
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/dingding123hhh/djnd/refs/heads/main/%E5%86%B7444.txt"))();
 local Window = Library:new("暗红脚本 ");
 
-local creds = Window:Tab("公告",'16060333448')
+local creds = Window:Tab("公告",'7734068321')
 local bin = creds:section("信息",true)
 local about = creds:section("作者",true)
 
-local Main = Window:Tab("主要",'16060333448')
+local Main = Window:Tab("主要",'7734068321')
 local General = Main:section("玩家",true)
 local GX = Main:section("通用",true)
 local QU = Main:section("ESP",true)
 local QW = Main:section("其他",true)
 
-local JSDGt = Window:Tab("驾驶帝国",'16060333448')
+local JSDGt = Window:Tab("驾驶帝国",'7734068321')
 local JSDG = JSDGt:section("自动&刷钱",true)
 
-local FMDHt = Window:Tab("伐木大亨2",'16060333448')
+local FMDHt = Window:Tab("伐木大亨2",'7734068321')
 local FMDH = FMDHt:section("伐木大亨2",true)
 
-local SKQSt = Window:Tab("鲨口求生2",'16060333448')
+local SKQSt = Window:Tab("鲨口求生2",'7734068321')
 local SKQS = SKQSt:section("鲨口&求生",true)
 
-local DoorsT = Window:Tab("doors",'16060333448')
+local DoorsT = Window:Tab("doors",'7734068321')
 local Doors = DoorsT:section("通用&功能",true)
 local DOORSR = DoorsT:section("透视",true)
 local BP = DoorsT:section("其他",true)
 
-local LLCQt = Window:Tab("力量传奇",'16060333448')
+local LLCQt = Window:Tab("力量传奇",'7734068321')
 local LLCQ = LLCQt:section("主要&功能",true)
 local LLQR = LLCQt:section("自动收集",true)
 local LLRQ = LLCQt:section("跑步机",true)
 local LLRE = LLCQt:section("岩石",true)
 local LLQQ = LLCQt:section("传送位置",true)
 
-local JSCQt = Window:Tab("极速传奇",'16060333448')
+local JSCQt = Window:Tab("极速传奇",'7734068321')
 local JSCQ = JSCQt:section("自动&玩家",true)
 local JSQC = JSCQt:section("传送位置",true)
 
-local RZCQt = Window:Tab("忍者传奇",'16060333448')
+local RZCQt = Window:Tab("忍者传奇",'7734068321')
 local RZCQ = RZCQt:section("自动&模式",true)
 local RZQC = RZCQt:section("传送位置",true)
 
-local JYRSt = Window:Tab("监狱人生",'16060333448')
+local JYRSt = Window:Tab("监狱人生",'7734068321')
 local TLT = JYRSt:section("整合",true)
 local JYRS = JYRSt:section("监狱&主要",true)
 local DL = JYRSt:section("身份",true)
 local DP = JYRSt:section("其他",true)
 local DX = JYRSt:section("传送地点",true)
 
-local ZDYSt = Window:Tab("战斗勇士",'16060333448')
+local ZDYSt = Window:Tab("战斗勇士",'7734068321')
 local ZDYS = ZDYSt:section("主要",true)
 
-local HBTXt = Window:Tab("河北唐县",'16060333448')
+local HBTXt = Window:Tab("河北唐县",'7734068321')
 local HBTX = HBTXt:section("主的",true)
 local HBXT = HBTXt:section("传送位置",true)
 
-local ZRZHt = Window:Tab("自然灾害",'16060333448')
+local ZRZHt = Window:Tab("自然灾害",'7734068321')
 local ZRZH = ZRZHt:section("自然&灾害",true)
 local RHE = ZRZHt:section("玩家",true)
 
-local EVt = Window:Tab("Evade",'16060333448')
+local EVt = Window:Tab("Evade",'7734068321')
 local EV = EVt:section("Evade",true)
 
-local XGt = Window:Tab("新更",'16060333448')
+local XGt = Window:Tab("新更",'7734068321')
 local XG = XGt:section("新更",true)
 local GN = XGt:section("实用工具",true)
 
-local OSCt = Window:Tab("其他脚本",'16060333448')
+local OSCt = Window:Tab("其他脚本",'7734068321')
 local OSC = OSCt:section("通用脚本",true)
 
-local SIJt = Window:Tab("视觉",'16060333448')
+local SIJt = Window:Tab("视觉",'7734068321')
 local SIJ = SIJt:section("视觉",true)
 local GIY = SIJt:section("光影",true)
 
-local QH = Window:Tab("俄亥俄州",'16060333448')
+local QH = Window:Tab("俄亥俄州",'7734068321')
 local QB = QH:section("自动模式",true)
 
-local EF = Window:Tab("FE",'16060333448')
+local EF = Window:Tab("FE",'7734068321')
 local FE = EF:section("FE",true)
 
-local EN = Window:Tab("作者通告",'16060333448')
+local EN = Window:Tab("作者通告",'7734068321')
 local NE = EN:section("玩家公告!",true)
 
-local VT = Window:Tab("其他注入器",'16060333448')
+local VT = Window:Tab("其他注入器",'7734068321')
 local YV = VT:section("输入器整合",true)
 
-local OH = Window:Tab("火箭发射模拟",'16060333448')
+local OH = Window:Tab("火箭发射模拟",'7734068321')
 local HO = OH:section("主要",true)
 local HQ = OH:section("传送位置",true)
 
-local UR = Window:Tab("超级大力士",'16060333448')
+local UR = Window:Tab("超级大力士",'7734068321')
 local RU = UR:section("主要的",true)
 local OR = UR:section("其他",true)
 local QS = UR:section("位置传送",true)
 
-local OSQ = Window:Tab("战争大亨",'16060333448')
+local OSQ = Window:Tab("战争大亨",'7734068321')
 local QOS = OSQ:section("主要",true)
 local SQO = OSQ:section("其他",true)
 local Tab2 = OSQ:section("传送位置",true)
