@@ -3,11 +3,11 @@
 ]]
 
 local OrionLib = loadstring(game:HttpGet("https://pastebin.com/raw/VeaMSRZK", true))()
- local Window =   OrionLib:MakeWindow({Name = "暗红血缝合王V2", HidePremium = false, SaveConfig = false, ConfigFolder = "rbxassetid://6026568198"}) 
+ local Window =   OrionLib:MakeWindow({Name = "暗红脚本V2", HidePremium = false, SaveConfig = false, ConfigFolder = "rbxassetid://6026568198"}) 
 
  OrionLib:MakeNotification({ 
- Name = "暗红血缝合王V2", 
- Content = "欢迎使用暗红血缝合王！", 
+ Name = "暗红脚本V2", 
+ Content = "欢迎使用暗红脚本！", 
  Image = "rbxassetid://4483345998", 
  Time = 5 
  })
@@ -27,10 +27,10 @@ LOL:AddLabel("清风合伙人")
 LOL:AddLabel("当前服务器ID:" .. game.GameId .. ".")
 LOL:AddParagraph("您的用户名:"," "..game.Players.LocalPlayer.Name.."")
 LOL:AddParagraph("您的注入器:"," "..identifyexecutor().."")
-LOL:AddLabel("作者：暗红血缝合王")
+LOL:AddLabel("作者：暗红血")
 LOL:AddLabel("QQ：3920675298")
 LOL:AddLabel("暗红脚本群号：942272935")
-LOL:AddLabel("更新忍者传奇功能")
+LOL:AddLabel("更新中")
 
 local Tab = Window:MakeTab({ 
  Name = "通用脚本", 
