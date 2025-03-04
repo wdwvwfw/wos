@@ -897,7 +897,7 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddButton({
-        Name = "脚本",
+        Name = "脚本（均为翻译）",
         Callback = function()
         loadstring(game:HttpGet("https://github.com/xiaoSB33/M416/raw/main/ggg.lua", true))()
           end
