@@ -21,9 +21,7 @@ local XA = Players.LocalPlayer
  PremiumOnly = false 
  })
 
-LOL:AddLabel("感谢清风、꒱等人")
-LOL:AddLabel("感谢清风、꒱等人")
-LOL:AddLabel("清风合伙人")
+LOL:AddLabel("KT合伙人")
 LOL:AddLabel("当前服务器ID:" .. game.GameId .. ".")
 LOL:AddParagraph("您的用户名:"," "..game.Players.LocalPlayer.Name.."")
 LOL:AddParagraph("您的注入器:"," "..identifyexecutor().."")
@@ -477,7 +475,7 @@ Tab:AddColorpicker({
 
 
 local Tab = Window:MakeTab({
-        Name = "极速传奇（清风制作）",
+        Name = "极速传奇",
         Icon = "rbxassetid://7733779610",
         PremiumOnly = false
 })
