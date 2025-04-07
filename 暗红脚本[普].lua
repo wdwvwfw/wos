@@ -31,6 +31,19 @@ LOL:AddLabel("暗红脚本群号：942272935")
 LOL:AddLabel("更新中")
 
 local Tab = Window:MakeTab({ 
+ Name = "暗红脚本[高]", 
+ Icon = "rbxassetid://10888331510", 
+ PremiumOnly = false 
+ })
+
+Tab:AddButton({
+        Name = "暗红脚本[高]",
+ Callback = function()
+loadstring(game:HttpGet("https://github.com/wdwvwfw/wos/blob/main/%E6%9A%97%E7%BA%A2%E8%84%9A%E6%9C%AC%5B%E9%AB%98%5D.lua", true))()
+  end
+})
+
+local Tab = Window:MakeTab({ 
  Name = "通用脚本", 
  Icon = "rbxassetid://10888331510", 
  PremiumOnly = false 
