@@ -1665,4 +1665,16 @@ guis:AddButton({
           end    
 })
 
+local Tab = Window:MakeTab({ 
+ Name = "暗红彩虹朋友脚本", 
+ Icon = "rbxassetid://10888331510", 
+ PremiumOnly = false 
+ })
+
+Tab:AddButton({
+        Name = "暗红彩虹朋友",
+ Callback = function()
+loadstring(game:HttpGet("https://github.com/wdwvwfw/wos/blob/main/%E5%BD%A9%E8%99%B9%E6%9C%8B%E5%8F%8B.lua", true))()
+  end
+})
  
