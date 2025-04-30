@@ -6,7 +6,7 @@ local OrionLib = loadstring(game:HttpGet("https://pastebin.com/raw/VeaMSRZK", tr
  local Window =   OrionLib:MakeWindow({Name = "暗红脚本V2", HidePremium = false, SaveConfig = false, ConfigFolder = "rbxassetid://6026568198"}) 
 
  OrionLib:MakeNotification({ 
- Name = "暗红脚本V2", 
+ Name = "暗红脚本V2（被入侵了）😈😈😈", 
  Content = "欢迎使用暗红脚本！", 
  Image = "rbxassetid://4483345998", 
  Time = 5 
@@ -21,7 +21,7 @@ local XA = Players.LocalPlayer
  PremiumOnly = false 
  })
 
-LOL:AddLabel("KT合伙人")
+LOL:AddLabel("QQ3126295205实名认证暗红脚本作者二跑路了👽👽👽")
 LOL:AddLabel("当前服务器ID:" .. game.GameId .. ".")
 LOL:AddParagraph("您的用户名:"," "..game.Players.LocalPlayer.Name.."")
 LOL:AddParagraph("您的注入器:"," "..identifyexecutor().."")
