@@ -472,19 +472,6 @@ Tab:AddColorpicker({
     end
 })
 
-local Tab = Window:MakeTab({ 
- Name = "暗红脚本[高]", 
- Icon = "rbxassetid://10888331510", 
- PremiumOnly = false 
- })
-
-Tab:AddButton({
-        Name = "暗红脚本[高]",
- Callback = function()
-loadstring(game:HttpGet("https://github.com/wdwvwfw/wos/blob/main/%E6%9A%97%E7%BA%A2%E8%84%9A%E6%9C%AC%5B%E9%AB%98%5D.lua"))()
-  end
-})
-
 local Tab = Window:MakeTab({
         Name = "极速传奇",
         Icon = "rbxassetid://7733779610",
