@@ -28,6 +28,7 @@ LOL:AddParagraph("您的注入器:"," "..identifyexecutor().."")
 LOL:AddLabel("作者：暗红血")
 LOL:AddLabel("暗红脚本群号：942272935")
 LOL:AddLabel("暗红脚本高")
+LOL:AddLabel("谢谢大家支持暗红脚本，更新将有作者二代替")
 
 local Tab = Window:MakeTab({ 
  Name = "通用脚本", 
