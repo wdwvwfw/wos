@@ -325,6 +325,13 @@ end
           end    
 })
 
+local Tab = Window:MakeTab({ 
+ Name = "FE", 
+ Icon = "rbxassetid://10888331510", 
+ PremiumOnly = false 
+ }) 
+
+
 
 local Tab = Window:MakeTab({ 
  Name = "范围", 
