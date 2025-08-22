@@ -6,8 +6,8 @@ local OrionLib = loadstring(game:HttpGet("https://pastebin.com/raw/VeaMSRZK", tr
  local Window =   OrionLib:MakeWindow({Name = "暗红脚本V2", HidePremium = false, SaveConfig = false, ConfigFolder = "rbxassetid://6026568198"}) 
 
  OrionLib:MakeNotification({ 
- Name = "暗红脚本V2", 
- Content = "欢迎使用暗红脚本！", 
+ Name = "暗红脚本", 
+ Content = "欢迎使用暗红脚本", 
  Image = "rbxassetid://4483345998", 
  Time = 5 
  })
@@ -29,6 +29,7 @@ LOL:AddLabel("作者：暗红血")
 LOL:AddLabel("暗红脚本群号：942272935")
 LOL:AddLabel("暗红脚本高")
 LOL:AddLabel("谢谢大家支持暗红脚本，更新将有作者二代替")
+LOL:AddLabel("重大声明：此脚本纯为免费，没有收费功能，收集来自互联网")
 
 local Tab = Window:MakeTab({ 
  Name = "通用脚本", 
@@ -325,12 +326,47 @@ end
           end    
 })
 
+
+local Tab = Window:MakeTab({ 
+ Name = "墨水游戏", 
+ Icon = "rbxassetid://10888331510", 
+ PremiumOnly = false 
+ }) 
+
+Tab:AddButton({
+        Name = "脚本（中文）",
+        Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Xingtaiduan/Script/refs/heads/main/Games/墨水游戏.lua"))()
+          end
+})
+
+Tab:AddButton({
+        Name = "脚本（xa全服通用）",
+        Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/h8nC0fLb", true))()loadstring(game:HttpGet("https://raw.githubusercontent.com/XingFork/Scripts/refs/heads/main/Ohio"))()
+          end
+})
+
+
 local Tab = Window:MakeTab({ 
  Name = "FE", 
  Icon = "rbxassetid://10888331510", 
  PremiumOnly = false 
  }) 
 
+Tab:AddButton({
+        Name = "免费通行证（部分服务器）",
+        Callback = function()
+        loadstring(game:HttpGet("https://github.com/xiaoSB33/M416/raw/main/FEE.lua"))()
+          end
+})
+
+Tab:AddButton({
+        Name = "巴掌崩服",
+        Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Umbrella-Scripter/Slap-Battles/refs/heads/main/F.L.O.W.E.R.lua'))()
+          end
+})
 
 
 local Tab = Window:MakeTab({ 
@@ -428,7 +464,7 @@ loop = RunService.RenderStepped:Connect(function()
 end)
 
 local Tab = Window:MakeTab({
-    Name = "自瞄",
+    Name = "自瞄（忍者可能会出错）",
     Icon = "rbxassetid://10888331510",
     PremiumOnly = false
 })
@@ -541,6 +577,19 @@ Tab:AddButton({
         Callback = function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13098.87109375, 216.83917236328125, 5907.6279296875)    
           end    
+})
+
+
+local Tab = Window:MakeTab({
+        Name = "后门脚本（只支持在后门服务器）",
+        Icon = "rbxassetid://6087485864",
+        PremiumOnly = false
+})
+
+Tab:AddButton({
+        Name = "脚本（使用教程：可以搜B站，或者快手等平台)",
+        Callback = function() loadstring(game:HttpGet('https://raw.githubusercontent.com/devguy100/PrizzLife/main/Source/release_v0.8.1.lua'))()
+          end
 })
 
 
@@ -1670,4 +1719,38 @@ Tab:AddButton({
 loadstring(game:HttpGet("https://github.com/wdwvwfw/wos/blob/main/%E5%BD%A9%E8%99%B9%E6%9C%8B%E5%8F%8B.lua", true))()
   end
 })
- 
+
+
+ local Tab = Window:MakeTab({ 
+ Name = "脚本大全", 
+ Icon = "rbxassetid://10888331510", 
+ PremiumOnly = false 
+ }) 
+
+Tab:AddButton({
+        Name = "云脚本（有免费版有付费版）",
+        Callback = function()
+        loadstring(game:HttpGet("https://github.com/CloudX-ScriptsWane/VIP/raw/main/%E4%BA%91%E8%84%9A%E6%9C%AC%2FCloud%20X%20Script.lua", true))()
+          end
+})
+
+Tab:AddButton({
+        Name = "皮脚本",
+        Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaopi77/xiaopi77/main/QQ1002100032-Roblox-Pi-script.lua"))()
+          end
+})
+
+Tab:AddButton({
+        Name = "X脚本",
+        Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/maowang1/xx/refs/heads/main/Protected_8858329470146381.txt"))()
+          end
+})
+
+Tab:AddButton({
+        Name = "皇脚本",
+        Callback = function()
+        loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\80\100\84\55\99\65\82\84"))()
+          end
+})
