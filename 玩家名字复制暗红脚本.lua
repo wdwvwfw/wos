@@ -1,13 +1,14 @@
+-- 玩家名字复制脚本
 local PlayerCopy = {}
 
-
+-- 创建界面
 function PlayerCopy:CreateGUI()
-   
+    -- 创建主界面
     local ScreenGui = Instance.new("ScreenGui")
     ScreenGui.Name = "PlayerCopyGUI"
     ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
     
-    
+    -- 主框架
     local MainFrame = Instance.new("Frame")
     MainFrame.Size = UDim2.new(0, 300, 0, 400)
     MainFrame.Position = UDim2.new(0.5, -150, 0.5, -200)
@@ -15,18 +16,18 @@ function PlayerCopy:CreateGUI()
     MainFrame.BorderSizePixel = 0
     MainFrame.Parent = ScreenGui
     
-    
+    -- 标题
     local Title = Instance.new("TextLabel")
     Title.Size = UDim2.new(1, 0, 0, 50)
     Title.Position = UDim2.new(0, 0, 0, 0)
     Title.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
     Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-    Title.Text = "暗红玩家名字复制器"
+    Title.Text = "玩家名字复制器"
     Title.TextScaled = true
     Title.Font = Enum.Font.GothamBold
     Title.Parent = MainFrame
     
-   
+    -- 关闭按钮
     local CloseButton = Instance.new("TextButton")
     CloseButton.Size = UDim2.new(0, 30, 0, 30)
     CloseButton.Position = UDim2.new(1, -35, 0, 10)
@@ -40,7 +41,7 @@ function PlayerCopy:CreateGUI()
         ScreenGui:Destroy()
     end)
     
-   
+    -- 搜索框
     local SearchBox = Instance.new("TextBox")
     SearchBox.Size = UDim2.new(0.9, 0, 0, 40)
     SearchBox.Position = UDim2.new(0.05, 0, 0, 60)
@@ -51,7 +52,7 @@ function PlayerCopy:CreateGUI()
     SearchBox.TextScaled = true
     SearchBox.Parent = MainFrame
     
-    
+    -- 玩家列表
     local PlayersFrame = Instance.new("ScrollingFrame")
     PlayersFrame.Size = UDim2.new(0.9, 0, 0, 280)
     PlayersFrame.Position = UDim2.new(0.05, 0, 0, 110)
@@ -60,7 +61,7 @@ function PlayerCopy:CreateGUI()
     PlayersFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
     PlayersFrame.Parent = MainFrame
     
-    
+    -- 更新玩家列表
     function PlayerCopy:UpdatePlayerList(searchTerm)
         PlayersFrame:ClearAllChildren()
         
@@ -79,12 +80,12 @@ function PlayerCopy:CreateGUI()
                 PlayerButton.Parent = PlayersFrame
                 
                 PlayerButton.MouseButton1Click:Connect(function()
-                    
+                    -- 复制到剪贴板
                     pcall(function()
                         setclipboard(player.Name)
                     end)
                     
-                    
+                    -- 显示复制成功消息
                     local Notification = Instance.new("TextLabel")
                     Notification.Size = UDim2.new(1, -20, 0, 30)
                     Notification.Position = UDim2.new(0, 10, 1, -40)
@@ -106,15 +107,15 @@ function PlayerCopy:CreateGUI()
         PlayersFrame.CanvasSize = UDim2.new(0, 0, 0, yOffset)
     end
     
-    
+    -- 搜索功能
     SearchBox:GetPropertyChangedSignal("Text"):Connect(function()
         PlayerCopy:UpdatePlayerList(SearchBox.Text)
     end)
     
-    
+    -- 初始更新
     PlayerCopy:UpdatePlayerList("")
     
-    
+    -- 使窗口可拖动
     local dragging = false
     local dragInput, dragStart, startPos
     
@@ -146,18 +147,18 @@ function PlayerCopy:CreateGUI()
     end)
 end
 
-
+-- 初始化
 function PlayerCopy:Init()
-    
+    -- 创建命令来打开GUI
     game.Players.LocalPlayer:WaitForChild("PlayerGui")
     
-    
+    -- 延迟创建界面以确保一切加载完成
     wait(1)
     
     self:CreateGUI()
 end
 
-
+-- 启动脚本
 PlayerCopy:Init()
 
 return PlayerCopy
