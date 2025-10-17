@@ -1,164 +1,162 @@
--- 玩家名字复制脚本
-local PlayerCopy = {}
+local gui = Instance.new("ScreenGui")
+gui.Name = "SimplePlayerCopy"
+gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
--- 创建界面
-function PlayerCopy:CreateGUI()
-    -- 创建主界面
-    local ScreenGui = Instance.new("ScreenGui")
-    ScreenGui.Name = "PlayerCopyGUI"
-    ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 250, 0, 300)
+frame.Position = UDim2.new(0, 10, 0, 10)
+frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+frame.BorderSizePixel = 0
+frame.Parent = gui
+
+
+local shadow = Instance.new("ImageLabel")
+shadow.Size = UDim2.new(1, 10, 1, 10)
+shadow.Position = UDim2.new(0, -5, 0, -5)
+shadow.BackgroundTransparency = 1
+shadow.Image = "rbxassetid://1316045217"
+shadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
+shadow.ImageTransparency = 0.8
+shadow.ScaleType = Enum.ScaleType.Slice
+shadow.SliceCenter = Rect.new(10, 10, 118, 118)
+shadow.Parent = frame
+
+
+local closeBtn = Instance.new("TextButton")
+closeBtn.Size = UDim2.new(0, 20, 0, 20)
+closeBtn.Position = UDim2.new(1, -25, 0, 5)
+closeBtn.BackgroundColor3 = Color3.fromRGB(255, 60, 60)
+closeBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+closeBtn.Text = "X"
+closeBtn.TextScaled = true
+closeBtn.ZIndex = 2
+closeBtn.Parent = frame
+
+closeBtn.MouseButton1Click:Connect(function()
+    gui:Destroy()
+end)
+
+local title = Instance.new("TextLabel")
+title.Size = UDim2.new(1, -30, 0, 30)
+title.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.Text = "暗红玩家复制器"
+title.Font = Enum.Font.GothamBold
+title.TextScaled = true
+title.ZIndex = 2
+title.Parent = frame
+
+local search = Instance.new("TextBox")
+search.Size = UDim2.new(0.9, 0, 0, 25)
+search.Position = UDim2.new(0.05, 0, 0, 35)
+search.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+search.TextColor3 = Color3.fromRGB(255, 255, 255)
+search.PlaceholderText = "搜索玩家名字..."
+search.TextScaled = true
+search.ZIndex = 2
+search.Parent = frame
+
+local scroll = Instance.new("ScrollingFrame")
+scroll.Size = UDim2.new(0.9, 0, 0, 235)
+scroll.Position = UDim2.new(0.05, 0, 0, 65)
+scroll.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+scroll.ScrollBarThickness = 5
+scroll.ZIndex = 2
+scroll.Parent = frame
+
+
+local corner = Instance.new("UICorner")
+corner.CornerRadius = UDim.new(0, 8)
+corner.Parent = frame
+
+local titleCorner = Instance.new("UICorner")
+titleCorner.CornerRadius = UDim.new(0, 8)
+titleCorner.Parent = title
+
+local searchCorner = Instance.new("UICorner")
+searchCorner.CornerRadius = UDim.new(0, 6)
+searchCorner.Parent = search
+
+local scrollCorner = Instance.new("UICorner")
+scrollCorner.CornerRadius = UDim.new(0, 6)
+scrollCorner.Parent = scroll
+
+local closeCorner = Instance.new("UICorner")
+closeCorner.CornerRadius = UDim.new(0, 4)
+closeCorner.Parent = closeBtn
+
+local function updateList(searchText)
+    scroll:ClearAllChildren()
+    local y = 0
     
-    -- 主框架
-    local MainFrame = Instance.new("Frame")
-    MainFrame.Size = UDim2.new(0, 300, 0, 400)
-    MainFrame.Position = UDim2.new(0.5, -150, 0.5, -200)
-    MainFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-    MainFrame.BorderSizePixel = 0
-    MainFrame.Parent = ScreenGui
-    
-    -- 标题
-    local Title = Instance.new("TextLabel")
-    Title.Size = UDim2.new(1, 0, 0, 50)
-    Title.Position = UDim2.new(0, 0, 0, 0)
-    Title.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-    Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-    Title.Text = "玩家名字复制器"
-    Title.TextScaled = true
-    Title.Font = Enum.Font.GothamBold
-    Title.Parent = MainFrame
-    
-    -- 关闭按钮
-    local CloseButton = Instance.new("TextButton")
-    CloseButton.Size = UDim2.new(0, 30, 0, 30)
-    CloseButton.Position = UDim2.new(1, -35, 0, 10)
-    CloseButton.BackgroundColor3 = Color3.fromRGB(255, 60, 60)
-    CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-    CloseButton.Text = "X"
-    CloseButton.TextScaled = true
-    CloseButton.Parent = MainFrame
-    
-    CloseButton.MouseButton1Click:Connect(function()
-        ScreenGui:Destroy()
-    end)
-    
-    -- 搜索框
-    local SearchBox = Instance.new("TextBox")
-    SearchBox.Size = UDim2.new(0.9, 0, 0, 40)
-    SearchBox.Position = UDim2.new(0.05, 0, 0, 60)
-    SearchBox.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-    SearchBox.TextColor3 = Color3.fromRGB(255, 255, 255)
-    SearchBox.PlaceholderText = "搜索玩家..."
-    SearchBox.Text = ""
-    SearchBox.TextScaled = true
-    SearchBox.Parent = MainFrame
-    
-    -- 玩家列表
-    local PlayersFrame = Instance.new("ScrollingFrame")
-    PlayersFrame.Size = UDim2.new(0.9, 0, 0, 280)
-    PlayersFrame.Position = UDim2.new(0.05, 0, 0, 110)
-    PlayersFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-    PlayersFrame.ScrollBarThickness = 8
-    PlayersFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
-    PlayersFrame.Parent = MainFrame
-    
-    -- 更新玩家列表
-    function PlayerCopy:UpdatePlayerList(searchTerm)
-        PlayersFrame:ClearAllChildren()
-        
-        local playerCount = 0
-        local yOffset = 0
-        
-        for _, player in pairs(game.Players:GetPlayers()) do
-            if string.find(string.lower(player.Name), string.lower(searchTerm or "")) then
-                local PlayerButton = Instance.new("TextButton")
-                PlayerButton.Size = UDim2.new(1, -10, 0, 40)
-                PlayerButton.Position = UDim2.new(0, 5, 0, yOffset)
-                PlayerButton.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
-                PlayerButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-                PlayerButton.Text = player.Name
-                PlayerButton.TextScaled = true
-                PlayerButton.Parent = PlayersFrame
-                
-                PlayerButton.MouseButton1Click:Connect(function()
-                    -- 复制到剪贴板
-                    pcall(function()
-                        setclipboard(player.Name)
-                    end)
-                    
-                    -- 显示复制成功消息
-                    local Notification = Instance.new("TextLabel")
-                    Notification.Size = UDim2.new(1, -20, 0, 30)
-                    Notification.Position = UDim2.new(0, 10, 1, -40)
-                    Notification.BackgroundColor3 = Color3.fromRGB(60, 180, 80)
-                    Notification.TextColor3 = Color3.fromRGB(255, 255, 255)
-                    Notification.Text = "已复制: " .. player.Name
-                    Notification.TextScaled = true
-                    Notification.Parent = MainFrame
-                    
-                    wait(2)
-                    Notification:Destroy()
-                end)
-                
-                yOffset = yOffset + 45
-                playerCount = playerCount + 1
-            end
+    for _, player in pairs(game.Players:GetPlayers()) do
+        if string.lower(player.Name):find(string.lower(searchText or "")) then
+            local btn = Instance.new("TextButton")
+            btn.Size = UDim2.new(1, -10, 0, 30)
+            btn.Position = UDim2.new(0, 5, 0, y)
+            btn.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+            btn.TextColor3 = Color3.fromRGB(255, 255, 255)
+            btn.Text = player.Name
+            btn.TextScaled = true
+            btn.ZIndex = 2
+            btn.Parent = scroll
+            
+            local btnCorner = Instance.new("UICorner")
+            btnCorner.CornerRadius = UDim.new(0, 4)
+            btnCorner.Parent = btn
+            
+            btn.MouseButton1Click:Connect(function()
+                pcall(setclipboard, player.Name)
+                btn.Text = "✓ 已复制!"
+                btn.BackgroundColor3 = Color3.fromRGB(60, 180, 80)
+                wait(1)
+                btn.Text = player.Name
+                btn.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+            end)
+            
+            y = y + 35
         end
-        
-        PlayersFrame.CanvasSize = UDim2.new(0, 0, 0, yOffset)
     end
     
-    -- 搜索功能
-    SearchBox:GetPropertyChangedSignal("Text"):Connect(function()
-        PlayerCopy:UpdatePlayerList(SearchBox.Text)
-    end)
-    
-    -- 初始更新
-    PlayerCopy:UpdatePlayerList("")
-    
-    -- 使窗口可拖动
-    local dragging = false
-    local dragInput, dragStart, startPos
-    
-    Title.InputBegan:Connect(function(input)
-        if input.UserInputType == Enum.UserInputType.MouseButton1 then
-            dragging = true
-            dragStart = input.Position
-            startPos = MainFrame.Position
-            
-            input.Changed:Connect(function()
-                if input.UserInputState == Enum.UserInputState.End then
-                    dragging = false
-                end
-            end)
-        end
-    end)
-    
-    Title.InputChanged:Connect(function(input)
-        if input.UserInputType == Enum.UserInputType.MouseMovement then
-            dragInput = input
-        end
-    end)
-    
-    game:GetService("UserInputService").InputChanged:Connect(function(input)
-        if dragging and input == dragInput then
-            local delta = input.Position - dragStart
-            MainFrame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-        end
-    end)
+    scroll.CanvasSize = UDim2.new(0, 0, 0, y)
 end
 
--- 初始化
-function PlayerCopy:Init()
-    -- 创建命令来打开GUI
-    game.Players.LocalPlayer:WaitForChild("PlayerGui")
-    
-    -- 延迟创建界面以确保一切加载完成
-    wait(1)
-    
-    self:CreateGUI()
-end
+search.Changed:Connect(function()
+    updateList(search.Text)
+end)
 
--- 启动脚本
-PlayerCopy:Init()
+updateList("")
 
-return PlayerCopy
+
+local dragging = false
+local dragStart, startPos
+
+title.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        dragging = true
+        dragStart = input.Position
+        startPos = frame.Position
+    end
+end)
+
+title.InputEnded:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        dragging = false
+    end
+end)
+
+game:GetService("UserInputService").InputChanged:Connect(function(input)
+    if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+        local delta = input.Position - dragStart
+        frame.Position = UDim2.new(0, startPos.X.Offset + delta.X, 0, startPos.Y.Offset + delta.Y)
+    end
+end)
+
+
+closeBtn.MouseEnter:Connect(function()
+    closeBtn.BackgroundColor3 = Color3.fromRGB(255, 100, 100)
+end)
+
+closeBtn.MouseLeave:Connect(function()
+    closeBtn.BackgroundColor3 = Color3.fromRGB(255, 60, 60)
+end)
