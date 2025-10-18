@@ -3,11 +3,11 @@
 ]]
 
 local OrionLib = loadstring(game:HttpGet("https://pastebin.com/raw/VeaMSRZK", true))()
- local Window =   OrionLib:MakeWindow({Name = "暗红脚本", HidePremium = false, SaveConfig = false, ConfigFolder = "rbxassetid://6026568198"}) 
+ local Window =   OrionLib:MakeWindow({Name = "暗红脚本V3", HidePremium = false, SaveConfig = false, ConfigFolder = "rbxassetid://6026568198"}) 
 
  OrionLib:MakeNotification({ 
  Name = "暗红脚本", 
- Content = "欢迎使用暗红脚本，永久免费", 
+ Content = "欢迎使用暗红脚本", 
  Image = "rbxassetid://4483345998", 
  Time = 5 
  })
@@ -1016,6 +1016,12 @@ Tab:AddButton({
         Name = "脚本",
  Callback = function()
 loadstring(game:HttpGet("https://github.com/xiaoSB33/M416/raw/main/qwa.lua", true))()
+  end
+})
+Tab:AddButton({
+        Name = "脚本2推荐",
+ Callback = function()
+loadstring(game:HttpGet("https://github.com/wdwvwfw/wos/raw/main/%E4%BF%84%E4%BA%A5%E4%BF%84%E5%B7%9E.lua", true))()
   end
 })
 
