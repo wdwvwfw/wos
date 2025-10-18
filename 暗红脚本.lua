@@ -1,3 +1,8 @@
+--[[
+你好呀(✪▽✪)
+]]
+
+
 local Player = Window:CreateTab("防巡查(玩家加入记录)", "triangle-alert")
 --初始化防巡查
 local function onPlayerJoin(player)
