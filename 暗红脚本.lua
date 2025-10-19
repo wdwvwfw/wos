@@ -1,6 +1,8 @@
 --[[
 你好呀(✪▽✪)
-暗红血:干嘛]]
+暗红血:干嘛
+我研发了一个江脚本，你号什么时候解封？
+]]
 
 
 local Player = Window:CreateTab("防巡查(玩家加入记录)", "triangle-alert")
